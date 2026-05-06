@@ -496,11 +496,31 @@ footer {
   .nav-socials a { font-size: 24px; }
   .cart-btn { padding: .5rem 1rem; font-size: .65rem; }
 
-  .hero { grid-template-columns: 1fr; min-height: 80vh; }
-  .hero-right { display: none; }
-  .hero-left { padding: 7rem 1.5rem 4rem; }
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    position: relative;
+  }
+  .hero-right {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-right::before {
+    background: linear-gradient(to top, var(--noir) 20%, rgba(10,10,9,0.6) 100%);
+  }
+  .hero-bg-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(.5);
+  }
+  .hero-left {
+    position: relative;
+    z-index: 2;
+    padding: 8rem 1.5rem 4rem;
+  }
   .hero-title { font-size: clamp(3.5rem, 14vw, 5rem); }
-
   .stats-strip { gap: 2rem; padding: 1.5rem; }
 
   .product-section { padding-bottom: 3rem; }
