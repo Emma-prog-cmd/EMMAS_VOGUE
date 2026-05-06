@@ -28,7 +28,8 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.4rem 4rem;
-  background: rgba(20,12,8,0.95);
+  background: rgba(20,12,8,0.97);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(201,168,76,0.15);
   transition: padding .4s;
@@ -425,43 +426,34 @@ footer {
 
   /* HERO MOBILE — image en fond */
   .hero {
-    display: block;
-    min-height: 100vh;
-    position: relative;
-  }
-  .hero-right {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: -webkit-fill-available !important;
+    min-height: 100svh !important;
+    position: relative !important;
+    background-image: url('https://emma-prog-cmd.github.io/EMMAS_VOGUE/images/robe1.jpg') !important;
+    background-size: cover !important;
+    background-position: center top !important;
+}
+.hero::before {
+    content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    inset: 0;
+    background: linear-gradient(to top, #140C08 20%, rgba(20,12,8,0.6) 100%);
     z-index: 0;
-  }
-  .hero-right::before {
-    content: '' !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background: linear-gradient(to top, #140C08 25%, rgba(20,12,8,0.55) 100%) !important;
-  }
-  .hero-bg-img {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: brightness(.45) !important;
-    animation: none;
-  }
-  .hero-left {
-    position: relative;
-    z-index: 2;
-    padding: 8rem 1.5rem 5rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .hero-deco { display: none; }
-  .hero-title { font-size: clamp(3.5rem, 14vw, 5rem); }
+}
+.hero-right { display: none !important; }
+.hero-left {
+    position: relative !important;
+    z-index: 2 !important;
+    padding: 6rem 1.5rem 4rem !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+	.hero-title { font-size: clamp(3rem, 14vw, 5rem) !important; }
+	.hero-tag, .hero-sub, .hero-ctas { display: flex !important; opacity: 1 !important; }
 
   .stats-strip { gap: 2rem; padding: 1.5rem; }
   .product-section { padding-bottom: 3rem; }

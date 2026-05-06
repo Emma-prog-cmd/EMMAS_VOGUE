@@ -1,4 +1,4 @@
-const BASE = 'https://emma-prog-cmd.github.io/EMMA'S_VOGUE/images/';
+const BASE = 'https://emma-prog-cmd.github.io/EMMAS_VOGUE/images/';
 const robes = [
   { id:'r1', name:'Robe Glamour', price:18000, img:'robe1.jpg' },
   { id:'r2', name:'Robe noire courte', price:28000, img:'robe2.jpg' },
