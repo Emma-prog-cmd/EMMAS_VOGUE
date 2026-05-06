@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emma's Vogue | Luxury Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+    Emma's <span>Vogue</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#robes">Robes</a></li>
+    <li><a href="#sacs">Sacs</a></li>
+    <li><a href="#talons">Talons</a></li>
+    <li><a href="#bracelets">Bracelets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-socials">
+      <a href="https://www.tiktok.com/@nue_lla35" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/Emma%20Nuella" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <button class="cart-btn" onclick="openCart()">
+      <i class="fas fa-shopping-bag"></i>
+      Panier
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Nouvelle Collection 2026</p>
+    <h1 class="hero-title">Emma's<em>Vogue</em></h1>
+    <p class="hero-sub">L'élégance à la portée de chaque femme. Pièces sélectionnées avec soin, disponibles à Cotonou.</p>
+    <div class="hero-ctas">
+      <a href="#robes" class="btn-primary">Découvrir</a>
+      <a href="#contact" class="btn-outline">Nous contacter</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-bg-img" src="images/robe4.jpg" alt="Collection Emma's Vogue"/>
+    <div class="hero-deco">Vogue</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-band">
+  <div class="marquee-inner">
+    <span class="marquee-item">Robes de luxe</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Sacs griffés</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Talons élégants</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Bijoux & Bracelets</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Livraison Cotonou</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Robes de luxe</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Sacs griffés</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Talons élégants</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Bijoux & Bracelets</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Livraison Cotonou</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat"><div class="stat-num">200+</div><div class="stat-lbl">Clientes satisfaites</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Collections</div></div>
+  <div class="stat"><div class="stat-num">32+</div><div class="stat-lbl">Pièces disponibles</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Qualité garantie</div></div>
+</div>
+
+<!-- ROBES -->
+<section id="robes" class="product-section">
+  <div class="section-header reveal">
+    <p class="section-tag">Notre sélection</p>
+    <h2 class="section-title">Nos <em>Robes</em></h2>
+  </div>
+  <div class="scroll-wrapper">
+    <button class="arrow-btn arrow-left" onclick="scrollCards(this,-1)"><i class="fas fa-chevron-left"></i></button>
+    <div class="product-track" id="robesGrid"></div>
+    <button class="arrow-btn arrow-right" onclick="scrollCards(this,1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- SACS -->
+<section id="sacs" class="product-section alt">
+  <div class="section-header reveal">
+    <p class="section-tag">Accessoires</p>
+    <h2 class="section-title">Nos <em>Sacs</em></h2>
+  </div>
+  <div class="scroll-wrapper">
+    <button class="arrow-btn arrow-left" onclick="scrollCards(this,-1)"><i class="fas fa-chevron-left"></i></button>
+    <div class="product-track" id="sacsGrid"></div>
+    <button class="arrow-btn arrow-right" onclick="scrollCards(this,1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- TALONS -->
+<section id="talons" class="product-section">
+  <div class="section-header reveal">
+    <p class="section-tag">Chaussures</p>
+    <h2 class="section-title">Nos <em>Talons</em></h2>
+  </div>
+  <div class="scroll-wrapper">
+    <button class="arrow-btn arrow-left" onclick="scrollCards(this,-1)"><i class="fas fa-chevron-left"></i></button>
+    <div class="product-track" id="talonsGrid"></div>
+    <button class="arrow-btn arrow-right" onclick="scrollCards(this,1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- BRACELETS -->
+<section id="bracelets" class="product-section alt">
+  <div class="section-header reveal">
+    <p class="section-tag">Bijoux</p>
+    <h2 class="section-title">Nos <em>Bracelets</em></h2>
+  </div>
+  <div class="scroll-wrapper">
+    <button class="arrow-btn arrow-left" onclick="scrollCards(this,-1)"><i class="fas fa-chevron-left"></i></button>
+    <div class="product-track" id="braceletsGrid"></div>
+    <button class="arrow-btn arrow-right" onclick="scrollCards(this,1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-left">
+    <div class="section-header reveal" style="text-align:left;padding:0 0 2rem;">
+      <p class="section-tag" style="justify-content:flex-start;">Nous trouver</p>
+      <h2 class="section-title">Contactez-<em>nous</em></h2>
+    </div>
+    <div class="contact-details reveal">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div><p class="contact-label">Adresse</p><p class="contact-value">Cotonou, Sikecodji</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div><p class="contact-label">Téléphone / WhatsApp</p><p class="contact-value">+229 01 50 50 96 00</p></div>
+      </div>
+    </div>
+    <div class="social-links reveal">
+      <a href="https://www.tiktok.com/@nue_lla35" target="_blank" class="social-link"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="https://www.facebook.com/Emma%20Nuella" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="contact-right reveal">
+    <h3 class="contact-form-title">Envoyer un message</h3>
+    <div class="form-group"><label>Votre nom</label><input type="text" id="contactNom" placeholder="Ex : Marie Dupont"/></div>
+    <div class="form-group"><label>Votre numéro WhatsApp</label><input type="tel" id="contactTel" placeholder="+229 ..."/></div>
+    <div class="form-group"><label>Votre message</label><textarea id="contactMsg" rows="4" placeholder="Bonjour, je suis intéressée par..."></textarea></div>
+    <button class="form-submit" onclick="sendContactWhatsapp()">
+      <i class="fab fa-whatsapp"></i> Envoyer sur WhatsApp
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Emma's Vogue</div>
+  <ul class="footer-nav">
+    <li><a href="#robes">Robes</a></li>
+    <li><a href="#sacs">Sacs</a></li>
+    <li><a href="#talons">Talons</a></li>
+    <li><a href="#bracelets">Bracelets</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Emma's Vogue · Cotonou</p>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h2>Mon Panier</h2>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Votre panier est vide.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-value" id="cartTotal">0 FCFA</span>
+    </div>
+    <button class="whatsapp-btn" onclick="checkoutWhatsapp()">
+      <i class="fab fa-whatsapp"></i> Finaliser sur WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- BOTTOM NAV MOBILE -->
+<nav class="bottom-nav">
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><i class="fas fa-home"></i><span>Accueil</span></a>
+  <a href="#robes"><i class="fas fa-tshirt"></i><span>Robes</span></a>
+  <a href="#sacs"><i class="fas fa-shopping-bag"></i><span>Sacs</span></a>
+  <a href="#talons"><i class="fas fa-shoe-prints"></i><span>Talons</span></a>
+  <a href="#bracelets"><i class="fas fa-gem"></i><span>Bracelets</span></a>
+  <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
