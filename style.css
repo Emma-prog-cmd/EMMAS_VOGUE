@@ -174,7 +174,7 @@ nav.scrolled { padding: .9rem 4rem; }
 
 /* ── STATS ── */
 .stats-strip {
-  background: var(--fond);
+  background: #0A0503;
   border-bottom: 1px solid rgba(201,168,76,.1);
   display: flex; justify-content: center;
   padding: 2rem 4rem; gap: 5rem; flex-wrap: wrap;
@@ -207,7 +207,7 @@ nav.scrolled { padding: .9rem 4rem; }
 .section-title em { font-style: italic; color: var(--or); }
 
 /* ── PRODUCT SECTION ── */
-.product-section { padding-bottom: 5rem; background: var(--fond); }
+.product-section { padding-bottom: 5rem; background: #0A0503;; }
 .product-section.alt { background: var(--noir); }
 
 /* ── SCROLL HORIZONTAL ── */
